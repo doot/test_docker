@@ -11,17 +11,17 @@ data:
 db:
   # The database container. Built from the db/Dockerfile.
   #build: db
-  build: git://github.com/doot/test_docker/db
+  build: git://github.com/doot/test_docker/
   restart: always
 
 app:
   # The app server container. Built from the app/Dockerfile.
-  build: git://github.com/doot/test_docker/app
+  build: git://github.com/doot/test_docker/
   #build: app
   restart: always
 
 web:
   # The web server container. Built from the web/Dockerfile.
-  build: git://github.com/doot/test_docker/web
+  build: git://github.com/doot/test_docker/
   #build: web
   restart: always
