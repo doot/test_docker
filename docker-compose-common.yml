@@ -12,6 +12,7 @@ db:
   # The database container. Built from the db/Dockerfile.
   #build: db
   build: git://github.com/doot/test_docker/
+  dockerfile: db/Dockerfile
   restart: always
 
 app:
