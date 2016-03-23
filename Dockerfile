@@ -2,9 +2,9 @@ FROM python:3.4
 
 ENV PYTHONUNBUFFERED 1
 
-ADD . /src
+ADD . /app/src
 
-WORKDIR /src
+WORKDIR /app/src
 
 RUN pip install -r requirements.txt
 
