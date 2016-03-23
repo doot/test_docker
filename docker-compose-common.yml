@@ -1,7 +1,7 @@
 app:
   # The app server container. Built from the app/Dockerfile.
-  #build: git://github.com/doot/test_docker/
-  build: .
+  build: git://github.com/doot/test_docker/
+  #build: .
   restart: always
 
   #web:
