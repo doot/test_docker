@@ -41,7 +41,8 @@ def index():
         db.session.commit()
         return redirect(url_for('index'))
 
-    return render_template('index.html', guests=Guest.query.all())
+    #return render_template('index.html', guests=Guest.query.all())
+    return "Hello!"
 
 
 class Guest(db.Model):
