@@ -1,0 +1,18 @@
+language: python
+python:
+  - 3.4
+
+services:
+  - docker
+
+install:
+  - docker build -t test_docker .
+  - docker run -d -p 127.0.0.1:80:8000 --name test_docker test_docker
+
+before_script:
+  - pip install -r requirements.txt
+
+script:
+  - docker ps | grep -q test_docker
+  - python tests.py
+
