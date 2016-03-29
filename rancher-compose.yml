@@ -1,0 +1,9 @@
+test-docker:
+  scale: 1
+  health_check:
+    port: 8000
+    interval: 2000
+    unhealthy_threshold: 3
+    strategy: none
+    healthy_threshold: 2
+    response_timeout: 2000

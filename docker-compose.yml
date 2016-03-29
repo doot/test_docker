@@ -1,0 +1,8 @@
+test-docker:
+  ports:
+  - 8000:8000/tcp
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  image: doot/test_docker
+  stdin_open: true
