@@ -42,7 +42,7 @@ def index():
         return redirect(url_for('index'))
 
     #return render_template('index.html', guests=Guest.query.all())
-    return "Hello!"
+    return "Hello There!"
 
 
 class Guest(db.Model):
