@@ -2,4 +2,5 @@
   "template": "python", 
   "ports": [8000],
   "name": "test_docker",
+    "description": "Test"
 }
