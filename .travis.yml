@@ -16,3 +16,6 @@ script:
   - docker ps | grep -q test_docker
   - python tests.py
 
+after_success:
+  - curl --data build=true -X POST https://registry.hub.docker.com/u/doot/test_docker/trigger/$DOCKER_TRIGGER/
+  
