@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask.ext.script import Manager
 from flask.ext.sqlalchemy import SQLAlchemy
 
+from flask_sslify import SSLify
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -23,6 +24,8 @@ SQLALCHEMY_DATABASE_URI = \
 
 
 app = Flask(__name__)
+app.debug = False
+sslify = SSLify(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 
