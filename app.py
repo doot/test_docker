@@ -36,7 +36,6 @@ db = SQLAlchemy(app)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     logger.debug(request.method + " index")
-    logger.debug("Debug value: " + app.debug)
     if request.method == 'POST':
         name = request.form['name']
         guest = Guest(name=name)
